@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import LoginPage from './components/LoginPage';
+import RegistrationPage from './components/RegistrationPage';
+import BlogCRUDPage from './components/BlogCRUDPage';
+import AdminApprovalPage from './components/AdminApprovalPage';
+import ApprovedBlogsPage from './components/ApprovedBlogsPage';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React app
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={RegistrationPage} />
+          <Route path="/admin/approval" component={AdminApprovalPage} />
+          <Route path="/blogs" component={BlogCRUDPage} />
+          <Route path="/approved-blogs" component={ApprovedBlogsPage} />
+          <Route path="/" exact component={LoginPage} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
