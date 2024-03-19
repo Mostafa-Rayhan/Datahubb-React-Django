@@ -30,11 +30,11 @@ const RegistrationPage = () => {
         <div>
           <h2>Registration</h2>
           <form onSubmit={handleSubmit}>
-            <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-            <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} />
-            <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
-            <input type="text" name="companyName" placeholder="Company Name" value={formData.companyName} onChange={handleChange} />
-            <input type="text" name="phoneNumber" placeholder="Phone Number" value={formData.phoneNumber} onChange={handleChange} />
+            <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} /><br/>
+            <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} /><br/>
+            <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} /><br/>
+            <input type="text" name="companyName" placeholder="Company Name" value={formData.companyName} onChange={handleChange} /><br/>
+            <input type="text" name="phoneNumber" placeholder="Phone Number" value={formData.phoneNumber} onChange={handleChange} /><br/>
             <button type="submit">Register</button>
           </form>
         </div>

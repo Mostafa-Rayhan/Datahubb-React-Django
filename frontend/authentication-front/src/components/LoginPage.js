@@ -28,8 +28,8 @@ const LoginPage = () => {
         <div>
           <h2>Login</h2>
           <form onSubmit={handleSubmit}>
-            <input type="text" name="username" placeholder="Username" value={credentials.username} onChange={handleChange} />
-            <input type="password" name="password" placeholder="Password" value={credentials.password} onChange={handleChange} />
+            <input type="text" name="username" placeholder="Username" value={credentials.username} onChange={handleChange} /><br/>
+            <input type="password" name="password" placeholder="Password" value={credentials.password} onChange={handleChange} /><br/>
             <button type="submit">Login</button>
           </form>
         </div>
